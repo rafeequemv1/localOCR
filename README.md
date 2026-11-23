@@ -4,7 +4,7 @@ Turn images and image-only PDFs into **editable documents**, entirely in the bro
 
 Nothing is uploaded. Recognition (Tesseract.js), PDF reading (PDF.js) and writing (pdf-lib, PptxGenJS) all run on the user's device. It is the engine behind the [NotebookTools](https://www.notebooktools.com) slide editor.
 
-**Try it:** serve the folder and open `demo/` (see [Run the demo](#run-the-demo)).
+**Try it:** [rafeequemv1.github.io/localOCR](https://rafeequemv1.github.io/localOCR/), or serve the folder and open `demo/` (see [Run the demo](#run-the-demo)).
 
 ## What you get
 
