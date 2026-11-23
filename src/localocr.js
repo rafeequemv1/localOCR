@@ -246,6 +246,6 @@
     return (await recognize(input, { ...options, pictures: false })).text;
   }
 
-  const LocalOCR = { version: "1.0.0", configure, ready, recognize, text };
+  const LocalOCR = { version: "1.1.0", configure, ready, recognize, text };
   global.LocalOCR = LocalOCR;
 })(typeof window !== "undefined" ? window : globalThis);

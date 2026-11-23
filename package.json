@@ -1,6 +1,6 @@
 {
   "name": "localocr",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Images and image-only PDFs to editable documents (text, pictures, PDF, PowerPoint), entirely in the browser.",
   "main": "src/localocr.js",
   "browser": "src/localocr.js",

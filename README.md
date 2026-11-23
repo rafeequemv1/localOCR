@@ -23,8 +23,8 @@ What it recognises beyond plain OCR:
 - font size, bold, italic, colour, serif or sans
 - styled words inside a line (a bold word, a coloured phrase) and superscripts and subscripts (cm⁻¹, H₂O)
 - numbers in circles (step badges)
-- labels on charts and diagrams
-- pictures, charts and drawings as separate images, with their shadows
+- labels on charts and diagrams, including words in small outlined pills and ellipses (each line of letters is redrawn on its own and read apart from the drawing)
+- pictures, charts and drawings as separate images, with their shadows; a diagram whose drawings are all joined by arrows is taken apart, one picture per drawing
 - tables, frames, cards and callouts kept as background, with what's inside them cut out separately
 
 ## Use it
@@ -141,7 +141,7 @@ npm test
 
 - **Browser only.** It needs `<canvas>`, Web Workers and WebAssembly. For a server, run it in a headless browser (as the test does).
 - **English** recognition is included. Other Tesseract languages can be added to `vendor/tesseract/lang/`; the engine currently asks for `eng`.
-- **Speed:** about a second per page on a laptop after the first page (the first one loads the model, ~3 MB).
+- **Speed:** about one to one and a half seconds per page on a laptop after the first page (the first one loads the model, ~3 MB).
 - **Accuracy** is measured on a benchmark of test slides with known answers in the NotebookTools repo (`bench/`): about 98 overall, 100 on text found and on picture separation, on its latest run.
 - **Size:** `vendor/` is about 14 MB, mostly the OCR core and model; they load only when you call `recognize()`.
 
