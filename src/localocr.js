@@ -221,6 +221,7 @@
   /**
    * Read an image or PDF and rebuild every page as editable parts.
    * options.pictures (default true): also cut out pictures, drawings and charts
+   * options.shapes (default false): plain cards and circles become shapes (rect, ellipse) instead of staying in the background
    * options.pages: PDF page numbers to read, e.g. [1, 2, 5]
    * options.onProgress({ page, pages, progress }): progress 0..1 overall
    * options.name: base file name for exports (default "document")
@@ -233,7 +234,7 @@
       const slide = engine.newSlide(canvases[i]);
       await engine.analyze(slide, (p) => {
         options.onProgress?.({ page: i + 1, pages: canvases.length, progress: (i + (p || 0)) / canvases.length });
-      }, { objects: options.pictures !== false });
+      }, { objects: options.pictures !== false, shapes: !!options.shapes });
       slides.push(slide);
       options.onProgress?.({ page: i + 1, pages: canvases.length, progress: (i + 1) / canvases.length });
     }
