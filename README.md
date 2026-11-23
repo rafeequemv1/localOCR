@@ -75,6 +75,7 @@ Then serve `node_modules/localocr/` as static files (the script loads its engine
 | Option | Default | |
 |---|---|---|
 | `pictures` | `true` | Also cut out pictures, charts and drawings. `false` is faster and keeps them in the background. |
+| `shapes` | `false` | Plain cards, panels and circles become shapes (`page.shapes`: `{ type: "rect" \| "ellipse", x, y, w, h, fill, radius, shadow }`) instead of staying in the background. |
 | `pages` | all | PDF page numbers to read, e.g. `[1, 3, 4]`. |
 | `onProgress` | | `({ page, pages, progress })`, progress 0–1 over the whole document. |
 | `name` | file name | Base name for exported files. |
