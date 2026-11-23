@@ -1,0 +1,16 @@
+{
+  "name": "localocr",
+  "version": "1.0.0",
+  "description": "Images and image-only PDFs to editable documents (text, pictures, PDF, PowerPoint), entirely in the browser.",
+  "main": "src/localocr.js",
+  "browser": "src/localocr.js",
+  "files": ["src", "vendor", "demo", "examples", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md"],
+  "scripts": {
+    "demo": "npx --yes http-server -c-1 -p 8080 .",
+    "test": "node test/smoke.js"
+  },
+  "keywords": ["ocr", "pdf", "editable", "pptx", "tesseract", "browser", "image-to-text", "searchable-pdf", "slides"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/rafeequemv1/localOCR.git" },
+  "devDependencies": { "playwright": "^1.48.0" }
+}

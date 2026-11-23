@@ -1,0 +1,30 @@
+:root { --bg: #f8fafd; --surface: #fff; --ink: #1f1f1f; --muted: #5f6368; --line: #e3e3e3; --accent: #0b57d0; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: "Google Sans Text", "Google Sans", Roboto, Arial, sans-serif; margin: 0; }
+.top { align-items: baseline; display: flex; flex-wrap: wrap; gap: 12px; padding: 20px 24px; }
+.top b { font: 400 22px "Google Sans", Roboto, Arial, sans-serif; }
+.top span { color: var(--muted); font-size: 14px; }
+main { margin: 0 auto; max-width: 1200px; padding: 0 24px 64px; }
+.drop { align-items: center; background: var(--surface); border: 1.5px dashed #c4c7c5; border-radius: 24px; cursor: pointer; display: flex; flex-direction: column; gap: 6px; padding: 40px 16px; text-align: center; }
+.drop.is-over { border-color: var(--accent); background: #f0f4ff; }
+.drop strong { font: 400 20px "Google Sans", Roboto, Arial, sans-serif; }
+.drop span { color: var(--muted); font-size: 14px; }
+.options { color: var(--muted); font-size: 14px; margin: 14px 4px; }
+.status { background: #e8f0fe; border-radius: 12px; color: #174ea6; font-size: 14px; padding: 10px 14px; }
+.status.is-error { background: #fce8e6; color: #c5221f; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
+.actions button { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; color: var(--ink); cursor: pointer; font: 500 14px inherit; font-family: inherit; height: 40px; padding: 0 18px; }
+.actions button:first-child { background: var(--ink); border-color: var(--ink); color: #fff; }
+.actions button:hover { opacity: .88; }
+.views { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+@media (max-width: 800px) { .views { grid-template-columns: 1fr; } }
+figure { margin: 0; }
+figcaption { color: var(--muted); font-size: 13px; margin: 0 0 6px 4px; }
+.page { background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(60,64,67,.18); overflow: hidden; position: relative; }
+.page img.full { display: block; width: 100%; }
+.page .layer { left: 0; position: absolute; top: 0; transform-origin: 0 0; }
+.page .layer > * { position: absolute; }
+.page .layer [contenteditable] { outline: none; white-space: pre-wrap; }
+.page .layer [contenteditable]:focus { outline: 2px solid var(--accent); }
+h2 { font: 400 18px "Google Sans", Roboto, Arial, sans-serif; margin: 28px 0 8px; }
+pre { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; font: 14px/1.5 "Google Sans Text", Roboto, Arial, sans-serif; margin: 0; padding: 16px; white-space: pre-wrap; }
